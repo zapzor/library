@@ -1,12 +1,16 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title
-  this.author = author
-  this.pages = pages
-  this.read = read
+class Book {
+  constructor(title, author) {
+  this.title = title;
+  this.author = author;
+  return `Created new book: ${this.title} by ${this.author}`
 }
 
-Book.prototype.addBookToLibrary = function() {
-  myLibrary.push[`${title} by ${author}, ${pages} pages, ${read}`]
+  addBookToLibrary() {
+    myLibrary.push(this.title);
+    return `Added ${this.title} by ${this.author} to the library.`;
   }
+}
+
+const hobbit = new Book('The Hobbit', 'J.R.R Tolkien');
