@@ -1,4 +1,6 @@
+// Vars and containers
 let myLibrary = [];
+const bookDisplay = document.querySelector("#bookDisplay");
 
 class Book {
   constructor(title, author) {
@@ -13,4 +15,14 @@ class Book {
   }
 }
 
+displayLibrary = function () {
+  bookDisplay.textContent = myLibrary
+}
+
 const hobbit = new Book('The Hobbit', 'J.R.R Tolkien');
+const foobar = new Book('foo', 'bar');
+const barfoo = new Book('bar', 'foo');
+
+hobbit.addBookToLibrary()
+foobar.addBookToLibrary()
+barfoo.addBookToLibrary()
