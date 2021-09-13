@@ -1,0 +1,63 @@
+html {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: white;
+}
+.card {
+  border: 1px solid #eee;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 4px;
+  width: 300px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.bookDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 36px;
+}
+
+.removeBook {
+  background-color: black;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 5px solid goldenrod;
+  border-radius: 10px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.61);
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {transform: translate(-50%, -50%) scale(1);}
+
+.modalBody {
+  padding: 10px 15px;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+
+.overlay.active {opacity: 1;pointer-events: all;}

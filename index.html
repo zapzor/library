@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
   <link rel="stylesheet" href="style.css" type="text/css">
   <script src="library.js" defer></script>
 
 </head>
 <body>
-<div id="bookDisplay">
+  <div class="bookDisplay"></div>
+  <button class="modalButton">bbb</button>
 
-</div>
+  <div class="modal">
+    <h3 class="sign-up-header">Add new book</h3>
+      <form class="modalBody">
+        <label for="title"></label><br>
+        <input type="text" id="title" name="title" placeholder="Title" required><br>
+        <label for="author"></label><br>
+        <input type="text" id="author" name="author" placeholder="Author" required><br>
+        <label for="pages"></label><br>
+        <input type="text" id="pages" name="pages" placeholder="Pages" required><br>
+        <button type="button" class="submitBook">Submit</button>
+      </form>
+  </div>
+  <div class="overlay"></div>
 </body>
 </html>
